@@ -1,3 +1,5 @@
+import os.path
+
 import torch
 from Nets.ZYNet import ZYNet
 import cv2
@@ -7,7 +9,7 @@ if __name__ == '__main__':
     n_class = 2
     img_size = 1024
     weights_path = 'Weights/best.resnet.2022-07-10-4110.pth.tar'
-    img_file = 'SV2-02-PMS-102-812-L00000018271.jpg'
+    img_file = 'Examples/SV2-01-PMS-126-691-L00000022796.jpg'
     
     device = torch.device('cpu')
     
@@ -31,10 +33,8 @@ if __name__ == '__main__':
         )
     )
 
-
     # create model
     model = ZYNet(**model_cfg)
-    model= model.to(device)
 
     checkpoint = torch.load(weights_path, map_location='cpu')
     
@@ -52,8 +52,12 @@ if __name__ == '__main__':
 
     # torch.jit.load("model.pt")
     # Use torch.jit.trace to generate a torch.jit.ScriptModule via tracing.
-    traced_script_module = torch.jit.trace(model, example)
-    traced_script_module.save("torch_scritp_model.pt")
+    save_deploy_w = 'Weights_Deploy/torch_scritp_model.pt'
+    if not os.path.exists(save_deploy_w):
+        traced_script_module = torch.jit.trace(model, example)
+        traced_script_module.save(save_deploy_w)
+    else:
+        traced_script_module = torch.jit.load(save_deploy_w)
     
     # test
     img = cv2.imread(img_file)
@@ -62,13 +66,20 @@ if __name__ == '__main__':
     img = cv2.resize(img, (img_size, img_size))
     dst_tensor = torch.from_numpy(img)
     dst_tensor = dst_tensor.view((1, img_size, img_size, 3))
-    dst_tensor = dst_tensor.permute((0, 3, 1, 2))
+    dst_tensor = dst_tensor.permute((0, 3, 1, 2)).float()
     output = traced_script_module(dst_tensor)
     pred_label = torch.argmax(output, dim=1)
     pred_label = pred_label.view((img_size, img_size))
     pred_label = (255 * pred_label).cpu().numpy().astype(np.uint8)
     result = cv2.resize(pred_label, (src_w, src_h), interpolation=cv2.INTER_NEAREST)
-    cv2.imwrite('pred.png', result)
+    cv2.imwrite('Examples_Results/pred_deploy.png', result)
+
+    output = model(dst_tensor)
+    pred_label = torch.argmax(output, dim=1)
+    pred_label = pred_label.view((img_size, img_size))
+    pred_label = (255 * pred_label).cpu().numpy().astype(np.uint8)
+    result = cv2.resize(pred_label, (src_w, src_h), interpolation=cv2.INTER_NEAREST)
+    cv2.imwrite('Examples_Results/pred_torch.png', result)
 
 
     # from Utils.Augmentations import *
