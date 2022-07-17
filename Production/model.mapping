@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<mapping>
+	<map>
+		<framework name="input.1" output_port_id="input.1" />
+		<IR name="input.1" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="conv1.layers.0.weight" output_port_id="conv1.layers.0.weight" />
+		<IR name="conv1.layers.0.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_0" output_port_id="50" />
+		<IR name="Conv_0" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv1.layers.1.weight" output_port_id="conv1.layers.1.weight" />
+		<IR name="conv1.layers.1.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_1" output_port_id="51" />
+		<IR name="Conv_1" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="98" output_port_id="98" />
+		<IR name="98" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_2" output_port_id="97" />
+		<IR name="Conv_2" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="LeakyRelu_3" output_port_id="54" />
+		<IR name="LeakyRelu_3" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2.layers.0.weight" output_port_id="conv2.layers.0.weight" />
+		<IR name="conv2.layers.0.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_4" output_port_id="55" />
+		<IR name="Conv_4" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv2.layers.1.weight" output_port_id="conv2.layers.1.weight" />
+		<IR name="conv2.layers.1.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_5" output_port_id="56" />
+		<IR name="Conv_5" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="101" output_port_id="101" />
+		<IR name="101" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_6" output_port_id="100" />
+		<IR name="Conv_6" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="LeakyRelu_7" output_port_id="59" />
+		<IR name="LeakyRelu_7" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv3.layers.0.weight" output_port_id="conv3.layers.0.weight" />
+		<IR name="conv3.layers.0.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_8" output_port_id="60" />
+		<IR name="Conv_8" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="conv3.layers.1.weight" output_port_id="conv3.layers.1.weight" />
+		<IR name="conv3.layers.1.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_9" output_port_id="61" />
+		<IR name="Conv_9" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="104" output_port_id="104" />
+		<IR name="104" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_10" output_port_id="103" />
+		<IR name="Conv_10" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="LeakyRelu_11" output_port_id="64" />
+		<IR name="LeakyRelu_11" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="ReduceMean_12" output_port_id="65" />
+		<IR name="ReduceMean_12" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="ReduceMax_13" output_port_id="66" />
+		<IR name="ReduceMax_13" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Concat_14" output_port_id="67" />
+		<IR name="Concat_14" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="att3.conv1.weight" output_port_id="att3.conv1.weight" />
+		<IR name="att3.conv1.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_15" output_port_id="68" />
+		<IR name="Conv_15" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Sigmoid_16" output_port_id="69" />
+		<IR name="Sigmoid_16" output_port_id="1" />
+	</map>
+	<map>
+		<framework name="Mul_17" output_port_id="70" />
+		<IR name="Mul_17" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Constant_18" output_port_id="71" />
+		<IR name="Constant_18" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Reshape_19" output_port_id="72" />
+		<IR name="Reshape_19" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose_20" output_port_id="73" />
+		<IR name="Transpose_20" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Constant_21" output_port_id="74" />
+		<IR name="Constant_21" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Reshape_22" output_port_id="75" />
+		<IR name="Reshape_22" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="up1.1.layers.0.weight" output_port_id="up1.1.layers.0.weight" />
+		<IR name="up1.1.layers.0.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_23" output_port_id="76" />
+		<IR name="Conv_23" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="up1.1.layers.1.weight" output_port_id="up1.1.layers.1.weight" />
+		<IR name="up1.1.layers.1.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_24" output_port_id="77" />
+		<IR name="Conv_24" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="107" output_port_id="107" />
+		<IR name="107" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_25" output_port_id="106" />
+		<IR name="Conv_25" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="LeakyRelu_26" output_port_id="80" />
+		<IR name="LeakyRelu_26" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Concat_27" output_port_id="81" />
+		<IR name="Concat_27" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Constant_28" output_port_id="82" />
+		<IR name="Constant_28" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Reshape_29" output_port_id="83" />
+		<IR name="Reshape_29" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Transpose_30" output_port_id="84" />
+		<IR name="Transpose_30" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Constant_31" output_port_id="85" />
+		<IR name="Constant_31" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Reshape_32" output_port_id="86" />
+		<IR name="Reshape_32" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="up2.1.layers.0.weight" output_port_id="up2.1.layers.0.weight" />
+		<IR name="up2.1.layers.0.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_33" output_port_id="87" />
+		<IR name="Conv_33" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="up2.1.layers.1.weight" output_port_id="up2.1.layers.1.weight" />
+		<IR name="up2.1.layers.1.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_34" output_port_id="88" />
+		<IR name="Conv_34" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="110" output_port_id="110" />
+		<IR name="110" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_35" output_port_id="109" />
+		<IR name="Conv_35" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="LeakyRelu_36" output_port_id="91" />
+		<IR name="LeakyRelu_36" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="Concat_37" output_port_id="92" />
+		<IR name="Concat_37" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="113" output_port_id="113" />
+		<IR name="113" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="Conv_38" output_port_id="112" />
+		<IR name="Conv_38" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="LeakyRelu_39" output_port_id="95" />
+		<IR name="LeakyRelu_39" output_port_id="2" />
+	</map>
+	<map>
+		<framework name="logit.3.weight" output_port_id="logit.3.weight" />
+		<IR name="logit.3.weight" output_port_id="0" />
+	</map>
+	<map>
+		<framework name="96" output_port_id="96" />
+		<IR name="96" output_port_id="2" />
+	</map>
+</mapping>
