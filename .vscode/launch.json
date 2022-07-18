@@ -1,0 +1,15 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+
+            "name": "Debug",
+            // lldb cppgdb
+            "type": "lldb",  
+            "request": "launch",
+            "program": "build/DeployCpp",
+            "cwd": "${workspaceRoot}",
+            "preLaunchTask": "build"
+        }
+    ]
+}

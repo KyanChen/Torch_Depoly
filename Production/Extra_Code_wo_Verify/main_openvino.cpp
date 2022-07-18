@@ -10,7 +10,7 @@ using namespace std;
 using namespace torch::indexing;
 using namespace InferenceEngine;
 
-int main()
+int main1()
 {
 
 	std::string model_xml = "model.xml";
