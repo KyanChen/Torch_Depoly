@@ -9,7 +9,7 @@ if __name__ == '__main__':
     n_class = 2
     img_size = 1024
     weights_path = 'Weights/best.resnet.2022-07-10-4110.pth.tar'
-    img_file = 'Examples/SV2-01-PMS-126-691-L00000022796.jpg'
+    img_file = 'Examples/00000022796.jpg'
     
     device = torch.device('cpu')
     
