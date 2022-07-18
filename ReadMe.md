@@ -1,6 +1,6 @@
-Pytorch Deploy
+Pytorch Deploy, C++, Python
 
-Pytorch 部署
+Pytorch 部署, Pytorch C++ 部署, Pytorch Python 生成可执行文件
 
 # Pytorch Deploy Script and C++ Executable Program Construction
 
